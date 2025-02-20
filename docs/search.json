@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "BCB520Class",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nFeb 20, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 17, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nFeb 17, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\n\n\n\n\n\n\nASSIGNMENT 4\n\n\nMarks and Channels\n\n\n\nAssignment\n\n\nDataViz\n\n\n\nHere’s a clever description that describes the stuff down below 😎\n\n\n\n\n\nFeb 8, 2024\n\n\nKyle Martin\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -26,5 +26,33 @@
     "title": "Post With Code",
     "section": "",
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#expressiveness-and-effectiveness",
+    "href": "posts/post-with-code/index.html#expressiveness-and-effectiveness",
+    "title": "ASSIGNMENT 4",
+    "section": "Expressiveness and Effectiveness",
+    "text": "Expressiveness and Effectiveness\n\n\nCode\nlibrary(faraway)\nlibrary(ggplot2)\nggplot(fruitfly, aes(x = longevity, y = activity)) + \n  geom_boxplot() + coord_flip()  +\n  labs(title = \"Longevity of Fruitflies Depending on Sexual Activity\")"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#discriminability",
+    "href": "posts/post-with-code/index.html#discriminability",
+    "title": "ASSIGNMENT 4",
+    "section": "Discriminability",
+    "text": "Discriminability\n\n\nCode\nlibrary(trtools)\nlibrary(ggplot2)\nggplot(cortex, aes(x = group, y = weight)) + \n  facet_wrap(~ experiment, ncol = 5) +\n  geom_bar(stat = \"identity\", position = \"dodge\", aes(fill=group)) +\n  xlab(\"Treatment Group\") +\n  ylab(\"Cortex Weight (mg)\") +\n  ggtitle(\"Effects of Experience on Brain Development\", subtitle = \"Experiments:\") +\n  theme(plot.subtitle = element_text(hjust = 0.5)) +\n  theme(axis.text.x = element_text(angle = 380, hjust = 0.5, vjust = 0.5, size = 10),\n        legend.position = \"right\")"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#separability",
+    "href": "posts/post-with-code/index.html#separability",
+    "title": "ASSIGNMENT 4",
+    "section": "Separability",
+    "text": "Separability\n\n\nCode\nlibrary(trtools)\nlibrary(dplyr)\nlibrary(ggplot2)\nbiomass |&gt; group_by(treatment) |&gt;\nsummarize(total = mean(total), suitable = mean(suitable))\n\n\n# A tibble: 2 × 3\n  treatment total suitable\n  &lt;fct&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 n          496.     57.2\n2 y         1028.    162. \n\n\nCode\np &lt;- ggplot(biomass, aes(x = total, y = suitable, color = treatment)) +\ngeom_point() + theme_minimal() +\nlabs(x = \"Total Biomass (kg/ha)\",\ny = \"Suitable Biomass (kg/ha)\",\ncolor = \"Treatment\")\nplot(p)"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#popout",
+    "href": "posts/post-with-code/index.html#popout",
+    "title": "ASSIGNMENT 4",
+    "section": "Popout",
+    "text": "Popout\n\n\nCode\nlibrary(asbio)\nlibrary(dplyr)\ndata(ant.dew)\nant.dew &lt;- ant.dew |&gt;\nmutate(direction = case_when(\ndirection == \"A\" ~ \"Descending\",\ndirection == \"D\" ~ \"Ascending\",\n.default = direction\n))\nlibrary(ggplot2)\nlibrary(cowplot)\np &lt;- ggplot(ant.dew, aes(x = head.width, y = ant.mass, color = direction)) +\ntheme_minimal() + geom_point() +\nlabs(x = \"Head Width (mm)\", y = \"Mass (mg)\", color = \"Direction\") +\n  geom_point(data = ant.dew, aes(x = 1.84, y = 10.00),\n             color = \"black\", size = 3, shape = 8)\nplot(p)"
   }
 ]
